@@ -18,13 +18,12 @@ var obj = {
 };
 
 const drag = (e) => {
-	let x = e.targetTouches[0].clientX;
-	let y = e.targetTouches[0].clientY;
+	let x = clamp(e.targetTouches[0].clientX, obj.width / 2, canvas.width -obj.width / 2);
+	let y = clamp(e.targetTouches[0].clientY, obj.height / 2, canvas.height-obj.height / 2);
 
 	obj.x = - obj.width / 2
 	obj.y = - obj.height / 2
 	obj.angle = cycle (obj.angle + (2* pi) / engine.fps, 0, 2*pi);
-	
 	move(x, y);
 };
 

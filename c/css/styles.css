@@ -7,3 +7,10 @@ canvas {
 	border: 1px solid #aaa;
 	box-sizing: border-box;
 }
+
+.game-container {
+	background : url("http://localhost:5000/c/files/imgs/thrust.webp");
+	background-repeat : no-repeat;
+	background-size: cover;
+	background-position-x: center;
+}
